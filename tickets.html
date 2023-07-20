@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Invisible information of the page -->
+  <head>
+    <title>Space Adventures Theme Park</title>
+    <link rel="icon" href="img/favicon.ico" />
+
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="This is the website of the theme park named 'Space Adventures'."
+    />
+    <meta name="author" content="Web development group number 23" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="refresh" content="600" />
+    <meta
+      name="keywords"
+      content="'Theme Park' 'Space Adventures' 'roller coaster' 'games'"
+    />
+
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/tickets.css" />
+  </head>
+
+  <!-- VISIBLE CONTENT ========================================== -->
+
+  <body>
+    <nav>
+      <a href="index.html"
+        ><img id="logo" src="img/logo.png" alt="Space Adventures Logo"
+      /></a>
+      <ul id="navLinks">
+        <li class="navLink">
+          <a class="buttonLink" href="index.html">Home</a>
+        </li>
+        <li class="navLink">
+          <a class="buttonLink active" href="tickets.html">Tickets</a>
+        </li>
+        <li class="navLink">
+          <a class="buttonLink" href="services.html">Services</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HEADER =================================================== -->
+
+    <header>
+      <h1 id="parkTitle">Space Adventures!</h1>
+      <a id="buyTicketsButton" class="buttonLink" href="tickets.html"
+        >Buy Tickets!</a
+      >
+    </header>
+
+    <!-- MAIN ===================================================== -->
+
+    <main>
+      <div id="parkInformation">
+        <!-- PRICES ===================================================== -->
+        <section id="ticketPrices">
+          <table>
+            <caption>
+              <h2 class="title">Prices</h2>
+            </caption>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Peak</th>
+                <th>Off-Peak</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Adult (10+)</th>
+                <td>$100</td>
+                <td>$80</td>
+              </tr>
+              <tr>
+                <th>Child (3-9)</th>
+                <td>$70</td>
+                <td>$50</td>
+              </tr>
+              <tr>
+                <th>
+                  Discounted&nbsp;<a
+                    class="helpLink"
+                    href="#discounted"
+                    aria-label="Discount Information"
+                    >i</a
+                  >
+                </th>
+                <td>$85</td>
+                <td>$65</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td id="pricesInfo" colspan="3">
+                  *Check the calendar for weather conditions. Subject to change.
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+
+        <!-- PARK MAP ===================================================== -->
+        <section id="themeParkMap">
+          <h2 class="title">Park Map</h2>
+          <img
+            id="parkMap"
+            src="img/park_map.png"
+            alt="map of the theme park"
+          />
+        </section>
+      </div>
+
+      <!-- CALENDAR ===================================================== -->
+      <section id="calendar">
+        <h2 id="calendarMonth">March 2023</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>
+                1
+                <div class="weatherIcon">❄</div>
+              </td>
+              <td>
+                2
+                <div class="weatherIcon">❄</div>
+              </td>
+              <td>
+                3
+                <div class="weatherIcon">💨☁️</div>
+              </td>
+              <td>
+                4
+                <div class="weatherIcon">💨☁️</div>
+              </td>
+              <td>
+                5
+                <div class="weatherIcon">🌧</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                6
+                <div class="weatherIcon">🌦</div>
+              </td>
+              <td>
+                7
+                <div class="weatherIcon">☁️</div>
+              </td>
+              <td>
+                8
+                <div class="weatherIcon">🌧</div>
+              </td>
+              <td>
+                9
+                <div class="weatherIcon">🌨</div>
+              </td>
+              <td>
+                10
+                <div class="weatherIcon">🌩</div>
+              </td>
+              <td>
+                11
+                <div class="weatherIcon">🌦</div>
+              </td>
+              <td>
+                12
+                <div class="weatherIcon">🌥</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                13
+                <div class="weatherIcon">⛅</div>
+              </td>
+              <td>
+                14
+                <div class="weatherIcon">🌥</div>
+              </td>
+              <td>
+                15
+                <div class="weatherIcon">🌞</div>
+              </td>
+              <td>
+                16
+                <div class="weatherIcon">🌦</div>
+              </td>
+              <td>
+                17
+                <div class="weatherIcon">🌦</div>
+              </td>
+              <td>
+                18
+                <div class="weatherIcon">🌥</div>
+              </td>
+              <td>
+                19
+                <div class="weatherIcon">⛅</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                20
+                <div class="weatherIcon">🌞💨</div>
+              </td>
+              <td>
+                21
+                <div class="weatherIcon">🌞💨</div>
+              </td>
+              <td>
+                22
+                <div class="weatherIcon">🌥</div>
+              </td>
+              <td>
+                23
+                <div class="weatherIcon">🌞</div>
+              </td>
+              <td>
+                24
+                <div class="weatherIcon">🌞</div>
+              </td>
+              <td>
+                25
+                <div class="weatherIcon">🌞</div>
+              </td>
+              <td>
+                26
+                <div class="weatherIcon">⛅</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                27
+                <div class="weatherIcon">☁️</div>
+              </td>
+              <td>
+                28
+                <div class="weatherIcon">🌦</div>
+              </td>
+              <td>
+                29
+                <div class="weatherIcon">☁️</div>
+              </td>
+              <td>
+                30
+                <div class="weatherIcon">🌞</div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td id="calendarInfo" colspan="7">
+                <strong>Important!</strong> Extreme weather events may affect
+                availability.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- Buy a ticket-->
+      <div id="ticketPurchase">
+        <!-- TICKET RESERVATION FORM ================================================ -->
+        <section id="reserveTickets">
+          <h2>Reserve a ticket</h2>
+          <form id="reserveTicketsForm" target="_self" autocomplete="on">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" />
+
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" />
+
+            <label for="emailField">Email:</label>
+            <input type="email" id="emailField" name="email" />
+
+            <label for="phoneField">Phone number:</label>
+            <input type="tel" id="phoneField" name="phoneNumber" />
+
+            <label for="adultsField">Number of adults:</label>
+            <input type="number" id="adultsField" name="adults" min="0" />
+
+            <label for="childField">Number of children:</label>
+            <input type="number" id="childField" name="children" min="0" />
+
+            <button class="buttonGeneric" type="submit">Reserve</button>
+          </form>
+        </section>
+
+        <!-- ACCESSIBILITY & DISCOUNTED INFO ========================================== -->
+        <section id="accessibilityInfo">
+          <h2 id="accessibility">Accessibility</h2>
+          <p>
+            Our facilities are designed to be accessible for all people. You
+            will find ramps, wide aisles for wheelchairs, and clear visual and
+            audio signage. Special vehicles and seats are also provided at
+            attractions to accommodate all people.
+          </p>
+
+          <p>
+            Restrooms are accessible, as they have wider spaces, grab bars, and
+            special equipment such as adjustable changing tables and transfer
+            hoists.
+          </p>
+
+          <p>
+            Finally, our support staff will be happy to help you move around the
+            park, get on and off attractions, and meet any of your needs.
+          </p>
+
+          <p>
+            Carers and other support persons gain free entry to the park, simply
+            show your DID/other or carer card.
+          </p>
+
+          <p>
+            Feel free to call or email with any other questions or concerns.
+          </p>
+
+          <h2 id="discounted">Discounted</h2>
+          <p>Those eligible for a discounted tickets include:</p>
+          <ul>
+            <li>DID card holders (or other disabled cards)</li>
+            <li>Over 65s</li>
+            <li>Students</li>
+            <li>Blue Light Card holders</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER ================================================= -->
+
+    <footer>
+      <div id="information">
+        <dl>
+          <dt>Email:</dt>
+          <dd>
+            <a href="mailto:contact@spaceadventures.com"
+              >contact@spaceadventures.com</a
+            >
+          </dd>
+          <dt>Phone number:</dt>
+          <dd>01247 676453</dd>
+        </dl>
+
+        <dl>
+          <dt>Address:</dt>
+          <dd>65 Chester Park Road, <br />London, GH65 6GF</dd>
+        </dl>
+      </div>
+      <p id="rights">©2023 Group 23 | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

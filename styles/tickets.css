@@ -1,0 +1,181 @@
+/* PARK INFORMATION ============================================ */
+
+/*(TICKET PRICES & THEME PARK MAP) */
+#parkInformation {
+  display: flex;
+  padding: 25px;
+}
+
+/* Prices table */
+#ticketPrices {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--purpleFont);
+}
+
+#ticketPrices tr {
+  text-align: left;
+}
+
+#ticketPrices thead th {
+  padding-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Prices table info button*/
+#pricesInfo {
+  padding-top: 10px;
+}
+
+/* Park map*/
+#parkMap {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  width: 100%;
+  object-fit: contain;
+  image-rendering: high-quality;
+}
+
+/* CALENDAR ======================================================== */
+
+/* Calendar header (month) */
+#calendarMonth {
+  font-size: 2.2rem;
+}
+
+/* Calendar */
+#calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--purpleFont);
+  padding: 25px;
+}
+
+#calendar table {
+  width: 100%;
+}
+
+#calendar thead th {
+  padding: 10px;
+  background: #a784ec;
+}
+
+#calendar tbody td {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.7rem;
+  width: calc(100% / 7);
+  height: 120px;
+  border: 3px solid #a784ec;
+  font-weight: bold;
+  position: relative;
+}
+
+#calendar tbody td:hover {
+  background: #a784ec;
+}
+
+/* Text underneath calendar */
+#calendarInfo {
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+/* weather symbols */
+.weatherIcon {
+  font-size: 1.3rem;
+  display: flex;
+  position: absolute;
+  transition: all 0.15s ease-in-out;
+  width: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+}
+
+/* how the weather symbol changes when hovering */
+#calendar td:hover .weatherIcon {
+  opacity: 1;
+}
+
+/* TICKETS & INFO ==================================================== */
+
+/* Ticket form & Accessibility section ================ */
+#ticketPurchase {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Ticket form section ========================= */
+#reserveTickets {
+  color: var(--purpleFont);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 40%;
+}
+
+/* Ticket form */
+#reserveTicketsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#reserveTicketsForm label {
+  margin-bottom: 10px;
+}
+
+#reserveTicketsForm input {
+  margin-bottom: 15px;
+}
+
+/* Accessibility ======================= */
+
+#accessibilityInfo {
+  color: var(--purpleFont);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 60%;
+  text-align: justify;
+}
+
+#accessibilityInfo p {
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+/* FOR SMALL SCREENS =============================================== */
+
+@media only screen and (max-width: 600px) {
+  /*PARK INFORMATION ============ */
+  #parkInformation {
+    flex-direction: column;
+  }
+  #ticketPrices {
+    margin-bottom: 25px;
+  }
+
+  /* Ticket form & Accessibility ============= */
+  #ticketPurchase {
+    flex-direction: column;
+  }
+
+  #reserveTickets {
+    width: 100%;
+  }
+
+  #accessibilityInfo {
+    width: 100%;
+  }
+}

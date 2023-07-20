@@ -1,0 +1,132 @@
+/* Styles for index page */
+
+/* MAIN INFORMATION ================================================= */
+
+/* RIDES ============================================= */
+
+/* Using cards, display rows of 3 */
+#rides {
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  margin-bottom: 25px;
+}
+
+/* Header is placed on entire first row with a width(span) of 3 columns */
+#rides > h2 {
+  grid-column: 1 / span 3;
+}
+
+/*(OPENING TIMES & THEME PARK LOCATION)================== */
+#mainInformation {
+  display: flex;
+  padding: 25px;
+}
+
+#openingTimes {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--purpleFont);
+  font-weight: bold;
+}
+
+#openingTimes tr {
+  text-align: left;
+}
+
+#openingTimes thead th {
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+#openingTimesInfo {
+  padding-top: 10px;
+}
+
+#map {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  width: 100%;
+  object-fit: contain;
+  image-rendering: high-quality;
+}
+
+/* VIDEO ================================================== */
+
+#walkingVideo {
+  width: 100%;
+}
+
+/* video captions */
+video::cue {
+  font-size: 2.2rem;
+  color: var(--yellow);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* MEDIA TAGS FOR MID SCREENS ==================================================== */
+
+@media only screen and (max-width: 1000px) {
+  /*RIDES ============ */
+  /*When on small screen display rows of 2 not the original 3 */
+  #rides {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*When on small screen header is placed still on entire first row but 
+  with a width(span) of 2 columns*/
+  #rides > h2 {
+    grid-column: 1 / span 2;
+  }
+
+  /*MAIN INFORMATION ============ */
+  #mainInformation {
+    flex-direction: column;
+  }
+  #openingTimes {
+    margin-bottom: 25px;
+  }
+
+  /* VIDEO =============== */
+  /* captions */
+  video::cue {
+    font-size: 1.7rem;
+  }
+}
+
+/* FOR SMALL SCREENS ================================================ */
+
+@media only screen and (max-width: 600px) {
+  /*RIDES ============ */
+  /*When on small screen display rows of 1 */
+  #rides {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /*When on small screen header is placed still on entire first row but 
+  with a width(span) of 1 column*/
+  #rides > h2 {
+    grid-column: 1 / span 1;
+  }
+
+  /*MAIN INFORMATION ============ */
+  #mainInformation {
+    flex-direction: column;
+  }
+  #openingTimes {
+    margin-bottom: 25px;
+  }
+
+  /* VIDEO =============== */
+  /* captions */
+  video::cue {
+    font-size: 1.2rem;
+  }
+}

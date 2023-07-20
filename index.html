@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Invisible information of the page -->
+  <head>
+    <title>Space Adventures Theme Park</title>
+    <link rel="icon" href="img/favicon.ico" />
+
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="This is the website of the theme park named 'Space Adventures'."
+    />
+    <meta name="author" content="Web development group number 23" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="refresh" content="600" />
+    <meta
+      name="keywords"
+      content="'Theme Park' 'Space Adventures' 'roller coaster' 'games'"
+    />
+
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+
+  <!-- VISIBLE CONTENT ============================================= -->
+
+  <body>
+    <nav>
+      <a href="index.html"
+        ><img id="logo" src="img/logo.png" alt="Space Adventures Logo"
+      /></a>
+
+      <ul id="navLinks">
+        <li class="navLink">
+          <a class="buttonLink active" href="index.html">Home</a>
+        </li>
+        <li class="navLink">
+          <a class="buttonLink" href="tickets.html">Tickets</a>
+        </li>
+        <li class="navLink">
+          <a class="buttonLink" href="services.html">Services</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HEADER ================================================== -->
+
+    <header>
+      <h1 id="parkTitle">Space Adventures!</h1>
+      <a id="buyTicketsButton" class="buttonLink" href="tickets.html"
+        >Buy Tickets!</a
+      >
+    </header>
+
+    <!-- MAIN ==================================================== -->
+    <main>
+      <!-- RIDES ===================================================== -->
+      <section id="rides">
+        <h2 class="title">Come and visit us soon!</h2>
+
+        <article class="card">
+          <img class="card-image" src="img/game1.png" alt="Space Twirl" />
+          <div class="card-footer">
+            <h3>Space Twirl</h3>
+            <div class="card-info">
+              Every NASA astronaut first sat in a space shuttle simulator and
+              now you can do it too! Experience REAL take-off and landing.
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-image" src="img/game2.png" alt="The Megalauncher" />
+          <div class="card-footer">
+            <h3>The Megalauncher</h3>
+            <div class="card-info">
+              You'll be lifted so high you might see the stars and then...
+              freefaaaall!!! <br />*not for children under 10 and 1.3m.
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-image" src="img/game3.png" alt="Planet Puree" />
+          <div class="card-footer">
+            <h3>Planet Puree</h3>
+            <div class="card-info">
+              Tossed and turned and mixed! Family friendly Planet Puree spins
+              like the rings of Saturn.
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-image" src="img/game4.png" alt="Zero Gravity" />
+          <div class="card-footer">
+            <h3>Zero Gravity</h3>
+            <div class="card-info">
+              A ride in the Zero Gravity wheel gives you a splendid view of the
+              city and the amusement park.
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-image" src="img/game5.png" alt="Spooky Space" />
+          <div class="card-footer">
+            <h3>Spooky Space</h3>
+            <div class="card-info">
+              Prepare your laser weapons for alien attack!
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            class="card-image"
+            src="img/game6.png"
+            alt="Ruins Of The Lost Civilisation"
+          />
+          <div class="card-footer">
+            <h3>Ruins Of The Lost Civilisation</h3>
+            <div class="card-info">
+              Ruins Of The Lost Civilisation invites you to experience the other
+              world from across the galaxy.
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Park Opening hours -->
+      <div id="mainInformation">
+        <!-- OPENING TIMES ===================================================== -->
+        <section id="openingTimes">
+          <table>
+            <caption>
+              <h2 class="title">Opening Times</h2>
+            </caption>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>10:00 - 19:00</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>10:00 - 19:00</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>10:00 - 19:00</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>10:00 - 19:00</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>10:00 - 19:00</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>08:00 - 21:00</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>08:00 - 21:00</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td id="openingTimesInfo" colspan="2">
+                  *Check the calendar on
+                  <a class="button" href="tickets.html">Tickets Office</a> page
+                  for more information.
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+        <!-- LOCATION MAP ===================================================== -->
+        <section id="themeParkLocation">
+          <h2 class="title">Location</h2>
+          <img id="map" src="img/map.png" alt="location of the theme park" />
+        </section>
+      </div>
+
+      <!-- VIDEO ===================================================== -->
+      <!-- muted as browsers don't allow autoplay with sound -->
+      <video
+        id="walkingVideo"
+        aria-label="Space adventurer walking on alien planet"
+        autoplay
+        loop
+        muted
+      >
+        <source id="mp4_src" src="vids/walking.mp4" type="video/mp4" />
+        Sorry, your browser does not support video.
+      </video>
+    </main>
+
+    <!-- FOOTER ============================================== -->
+
+    <footer>
+      <div id="information">
+        <dl>
+          <dt>Email:</dt>
+          <dd>
+            <a href="mailto:contact@spaceadventures.com"
+              >contact@spaceadventures.com</a
+            >
+          </dd>
+          <dt>Phone number:</dt>
+          <dd>01247 676453</dd>
+        </dl>
+
+        <dl>
+          <dt>Address:</dt>
+          <dd>65 Chester Park Road, <br />London, GH65 6GF</dd>
+        </dl>
+      </div>
+      <p id="rights">©2023 Group 23 | All Rights Reserved</p>
+    </footer>
+
+    <!-- SCRIPTS ============================================ -->
+    <!-- javascript for video captions-->
+    <script src="scripts/video.js"></script>
+  </body>
+</html>

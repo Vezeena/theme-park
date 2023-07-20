@@ -1,0 +1,359 @@
+/* Styles for shared items such as nav bar, header, footer, etc. */
+
+/* Common colours shared across all pages: */
+:root {
+  --purpleRgb: 97, 47, 253;
+  --purple: rgb(var(--purpleRgb));
+  --yellowRgb: 253, 200, 47;
+  --yellow: rgb(var(--yellowRgb));
+
+  --backgroundColourRgb: 245, 244, 251;
+  --backgroundColour: rgb(var(--backgroundColourRgb));
+
+  --yellowFontRgb: 239, 172, 56;
+  --yellowFont: rgb(var(--yellowFontRgb));
+  --purpleFontRgb: 88, 70, 139;
+  --purpleFont: rgb(var(--purpleFontRgb));
+}
+
+/* BODY ============================================================= */
+/* To calculate width more intuitively - * for all elements 
+(includes padding and border in width calculation) */
+* {
+  box-sizing: border-box;
+}
+
+/* Font Family for generic text on all pages/buttons/etc (i.e not headers) */
+/* bootstrap font-family */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  background-color: var(--backgroundColour);
+  /* sets font colour white unless otherwise specified */
+  color: white;
+
+  margin: 0;
+}
+
+/* Fonts for h2 titles shared across all pages */
+.title {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana;
+  text-align: center;
+  font-size: 2.3rem;
+  margin-top: 0;
+  padding: 5px;
+  color: var(--yellowFont);
+}
+
+/* NAV BAR ========================================================== */
+nav {
+  padding: 10px;
+  background-image: linear-gradient(100deg, var(--purple), var(--yellow));
+  box-shadow: 0 0 8px rgba(var(--purpleRgb), 0.7);
+  /* z-index to keep nav bar in front of everything*/
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* space adventures logo */
+#logo {
+  object-fit: contain;
+  height: 50px;
+  image-rendering: high-quality;
+}
+
+/* navigation bar 'buttons' (links) */
+#navLinks {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+
+/* when a navLink is followed by another navLink */
+.navLink + .navLink {
+  margin-left: 5px;
+}
+
+/* Nav bar buttons (Home, Tickets Office, More Services) - anything with
+a class id of buttonLink */
+.buttonLink {
+  background-color: white;
+  color: black;
+  border: 2px solid var(--purple);
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  border-radius: 3px;
+  font-size: 1.1rem;
+}
+
+/* invert colours when hovering and active */
+.buttonLink:hover,
+.buttonLink:active,
+.buttonLink.active {
+  background-color: rgba(var(--purpleRgb), 0.95);
+  color: white;
+}
+
+/*Generic use buttons (e.g tickets reservation button) - anything with
+a class id of button */
+.buttonGeneric {
+  border: 2px solid var(--purple);
+  outline: none;
+  background-color: var(--purpleFont);
+  color: var(--yellow);
+  padding: 7px 15px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.1rem;
+}
+
+/* make colours when hovering and active same as navLinks when hovering and active*/
+.buttonGeneric:hover,
+.buttonGeneric:active,
+.buttonGeneric.active {
+  background-color: rgba(var(--purpleRgb), 0.95);
+  color: white;
+}
+
+/* HEADER ======================================================== */
+header {
+  background-image: url("../img/header.jpg");
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* H1 park name 'Space Adventures!' */
+#parkTitle {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  color: var(--yellowFont);
+  text-shadow: 5px 5px 0 rgba(206, 94, 2, 0.907);
+  font-size: 5rem;
+  transform: rotate(-5deg);
+  text-align: center;
+}
+
+/* button on h1 parkTitle that links to ticket page */
+#buyTicketsButton {
+  background-color: var(--yellow);
+  color: black;
+  border-color: var(--yellow);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Button set to shake infinitely when hovered over or active */
+#buyTicketsButton:hover,
+#buyTicketsButton:active {
+  animation: shake 0.3s;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 8px var(--yellow);
+}
+
+/* Rotation for Buy Tickets button shaking */
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* MAIN =========================================================== */
+/* to stop content reaching the edge of the page */
+main {
+  margin: 0 auto;
+  max-width: 75%;
+}
+
+/* Help links (such as that used on Tickets page, in the Prices section, 
+beside 'discounted') */
+.helpLink {
+  color: var(--yellow);
+  background-color: var(--purpleFont);
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+/* CARDS FOR ARTICLES =============================================== */
+
+/* For anything with card class, like rides, restaurants, stores. Used to
+display an image with a yellow card ontop that moves up to display text */
+.card {
+  position: relative;
+  height: 287px;
+}
+
+/* Background image of the card */
+.card-image {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer at bottom of the card pre-hover */
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(var(--yellowRgb), 0.95);
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1.1rem;
+}
+/* When hovering the mouse over the whole area, the footer will change to: */
+.card:hover .card-footer {
+  height: 100%;
+  background-color: rgba(var(--yellowRgb), 0.9);
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+/* Card text or info on the card footer set to be 'invisible' until
+hovered over */
+.card-info {
+  font-size: 0;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+/* When hovering the mouse over the whole area, the text on the card footer
+ will change to be a visible size */
+.card:hover .card-info {
+  font-size: 1.1rem;
+  opacity: 1;
+}
+
+/* FOOTER =========================================================== */
+
+/* Footer background */
+footer {
+  background-color: rgba(var(--purpleRgb), 0.95);
+  color: white;
+  padding: 2rem;
+  margin-top: 25px;
+}
+
+/* Footer links */
+footer a {
+  color: var(--yellow);
+}
+
+/* Footer content */
+#information {
+  margin: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#information dl {
+  margin: 0;
+}
+
+#information dt {
+  font-weight: bold;
+}
+#information dd {
+  margin: 0;
+}
+#information dd + dt {
+  margin-top: 10px;
+}
+
+#rights {
+  margin: 0;
+  text-align: center;
+}
+
+/* MEDIA TAGS FOR SMALL SCREENS =================================== */
+
+@media only screen and (max-width: 600px) {
+  /*BODY ============ */
+  .title {
+    font-size: 1.8rem;
+  }
+
+  /* NAV =========== */
+  nav .buttonLink {
+    font-size: 0.9rem;
+  }
+
+  #logo {
+    height: 30px;
+  }
+
+  /* HEADER ========= */
+  #parkTitle {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  /*MAIN ============ */
+  main {
+    max-width: 100%;
+  }
+
+  /* FOOTER ========= */
+  /* Changes footer direction to display content vertically and take up 
+  less space */
+  #information {
+    flex-direction: column;
+  }
+
+  #information dl + dl {
+    margin-top: 10px;
+  }
+}
